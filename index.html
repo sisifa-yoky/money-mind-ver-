@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONEY MIND</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>MONEY <span>MIND</span></h1>
+    </header>
+
+    <main>
+
+        <section id="dashboard">
+            <div class="section-heading">
+                <span>01</span>
+                <h2>いまの状況</h2>
+            </div>
+            <div class="status-grid">
+                <div>
+                    <p class="label">残りのお金</p>
+                    <p class="stat">¥<span id="money">50,000</span></p>
+                </div>
+                <div>
+                    <p class="label">自由に使える時間</p>
+                    <p class="stat"><span id="time">8</span><small> 時間</small></p>
+                </div>
+                <div>
+                    <p class="label">今日</p>
+                    <p class="stat" id="day">月曜日</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="calendar">
+            <div class="section-heading">
+                <span>02</span>
+                <h2>今週のカレンダー</h2>
+            </div>
+            <div id="days"></div>
+        </section>
+
+        <section id="tasks">
+            <div class="section-heading">
+                <span>03</span>
+                <h2>毎日やること</h2>
+            </div>
+            <div id="task-list"></div>
+        </section>
+
+        <section id="events">
+            <div class="section-heading">
+                <span>04</span>
+                <h2>イベント</h2>
+            </div>
+            <p id="event-title" class="label"></p>
+            <p id="event-description">今日は何が起こるかな？</p>
+            <div id="event-choices"></div>
+            <button id="event-button">今日の出来事を見る →</button>
+        </section>
+
+        <section id="controls">
+            <button id="next-day">明日へ進む →</button>
+        </section>
+
+        <section id="results" class="hidden">
+            <div class="section-heading">
+                <span>05</span>
+                <h2>7日間の結果</h2>
+            </div>
+            <div id="final-report"></div>
+            <button id="restart">もう一度あそぶ</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
