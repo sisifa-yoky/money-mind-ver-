@@ -14,7 +14,7 @@ MONEY MINDは、日常生活の中でお金と時間をやりくりしながら�
 
 ## ③ アプリのデプロイURL
 
-MONEY MINDをプレイする
+https://sisifa-yoky.github.io/money-mind-ver-/
 
 ## ④ アプリのログイン用IDまたはPassword（ある場合）
 
