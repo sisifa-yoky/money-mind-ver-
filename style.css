@@ -1,0 +1,246 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 45px 30px;
+    background: #E9E2D3;
+    color: #22221F;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    padding: 0;
+    border: none;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(65px, 8vw, 95px);
+    line-height: 0.82;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -5px;
+}
+
+header h1 span {
+    display: block;
+    color: #76513D;
+}
+
+/* MAIN LAYOUT */
+main {
+    display: contents;
+}
+
+#dashboard {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 25px;
+    margin: 0;
+    background: #344638;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+
+#calendar {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#tasks {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#events,
+#controls,
+#results {
+    grid-column: 1 / -1;
+}
+
+/* SECTION HEADINGS */
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.section-heading > span {
+    color: #76513D;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#dashboard .section-heading {
+    margin-bottom: 25px;
+}
+
+#dashboard .section-heading > span {
+    color: #D6C5AE;
+}
+
+#dashboard .section-heading h2 {
+    color: #FFFFFF;
+}
+
+/* DASHBOARD STATS */
+#dashboard .status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#dashboard .status-grid > div {
+    min-width: 0;
+    padding: 15px;
+    background: #FFFFFF;
+    color: #22221F;
+    border-radius: 4px;
+}
+
+#dashboard .label {
+    margin: 0 0 12px;
+    color: #77766D;
+    font-size: 13px;
+}
+
+#dashboard .stat {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+#money {
+    color: #344638;
+}
+
+/* CONTENT BOXES */
+#calendar,
+#tasks,
+#events,
+#results {
+    min-width: 0;
+    padding: 25px;
+    background: #FFFFFF;
+    border: 1px solid #D1C8B8;
+    border-radius: 6px;
+}
+
+/* CALENDAR */
+#days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.day {
+    padding: 13px 4px;
+    text-align: center;
+    background: #E9E2D3;
+    border-radius: 3px;
+}
+
+.day.active {
+    background: #76513D;
+    color: #FFFFFF;
+}
+
+.day.completed {
+    background: #344638;
+    color: #FFFFFF;
+}
+
+/* TASKS */
+#task-list p {
+    padding: 12px;
+    margin: 8px 0;
+    background: #E9E2D3;
+    border-left: 3px solid #344638;
+}
+
+/* EVENTS */
+#events {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border-radius: 6px 6px 0 0;
+    border-bottom: none;
+}
+
+#event-title:not(:empty) {
+    color: #76513D;
+}
+
+#event-description {
+    color: #55554F;
+    line-height: 1.7;
+}
+
+#event-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+#event-choices small {
+    display: block;
+    margin-top: 6px;
+}
+
+/* BUTTONS */
+button {
+    padding: 13px 20px;
+    background: #344638;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #76513D;
+}
+
+button:disabled {
+    background: #D1C8B8;
+    color: #77766D;
+    cursor: not-allowed;
+}
+
+/* NEXT DAY BUTTON */
+#controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -25px;
+    padding: 15px 25px 25px;
+    background: #FFFFFF;
+    border: 1px solid #D1C8B8;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+/* RESULTS */
+#results {
+    border-radius: 6px;
+}
+
+#final-report .rank {
+    color: #76513D;
+    font-size: 28px;
+    font-weight: bold;
+}
